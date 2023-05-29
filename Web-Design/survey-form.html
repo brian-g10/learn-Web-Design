@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>XR Survey Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="survey-form.css">
+    </head>
+    <body>
+        <div class="form">
+        <h1 id="title">XR Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <form id="survey-form" action="https://xrnews.org" method="post">
+            <fieldset>
+                <label id="name-label" for="name">Name<input placeholder="Enter your name" id="name" type="text" required name="name"/></label>        
+                <label id="email-label" for="email">Email<input placeholder="Enter your Email" id="email" type="email" required name="email"/></label>
+                <label id="number-label" for="age">Age (optional)<input placeholder="Age" id="number" type="number" required min="13" max="120" name="number"/>
+                </label>                
+                <label for="referrer">Which option best describes your current role?
+                <select id="dropdown" name="referrer">
+                    <option value="">(select current role)</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full-time job</option>
+                    <option value="3">Full-time learner</option>
+                    <option value="3">Prefer not to answer</option>
+                    <option value="4">Other</option>
+                </select>
+                </label>            
+                <label>Would you recommend XR to a friend?</label>
+                <label for="definately"><input id="definately" type="radio" name="satisfaction-level" class="inline" value="definately"/>Definately</label>
+                <label for="maybe"><input id="maybe" type="radio" name="satisfaction-level" class="inline" value="maybe"/>Maybe</label>
+                <label for="not sure"><input id="not sure" type="radio" name="satisfaction-level" class="inline" value="not sure"/>Not sure</label>     
+
+                <label for="feature">What is your favorite feature of XR?
+                    <select id="feature" name="feature">
+                        <option value="">(Select an option)</option>
+                        <option value="1">Challenges</option>
+                        <option value="2">Projects</option>
+                        <option value="3">Community</option>
+                        <option value="3">Open Source</option>                    
+                    </select>
+                </label>
+
+                <label for="suggest">What would you like to see improved? (Check all that apply)</label>
+                <label for="front-end projects"><input id="front-end projects" type="checkbox" name="front" class="inline" value="front"/> Front-end Projects</label>
+                <label for="back-end projects"><input id="back-end projects" type="checkbox" name="back" class="inline" value="back"/> Back-end Projects</label>
+                <label for="data visualization"><input id="data visualization" type="checkbox" name="data" class="inline" value="data"/> Data Visualization</label>
+                <label for="challenges"><input id="challenges" type="checkbox" name="challenges" class="inline" value="challenges"/> Challenges</label>
+                <label for="open source community"><input id="open source community" type="checkbox" name="open" class="inline" value="open"/> Open Source Community</label>
+                <label for="gitter help rooms"><input id="gitter help rooms" type="checkbox" name="help" class="inline" value="help"/> Gitter help rooms</label>
+                <label for="videos"><input id="videos" type="checkbox" name="videos" class="inline" value="videos"/> Videos</label>
+                <label for="wiki"><input id="wiki" type="checkbox" name="wiki" class="inline" value="wiki"/> Wiki</label>
+                <label for="forum"><input id="forum" type="checkbox" name="forum" class="inline" value="forum"/> Forum</label>
+                <label for="additional courses"><input id="additional courses" type="checkbox" name="courses" class="inline" value="courses"/> Additional Courses</label>
+
+                <label for="suggestions">Any comments or suggestions?
+                    <textarea id ="suggestions" rows="3" cols="30" placeholder="Enter your comment here..." name="suggestions"></textarea>
+                    </label>
+            </fieldset>
+
+                <input id="submit" type="submit" value="Submit"/>
+        </form>
+        </div>
+    </body>
+</html>    
