@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> <!--the lang attribute with the value en to the opening html tag to specify that the language of the page is English-->
-  <head>
-    <title>SF Birds</title> <!--The title element determines what browsers show in the title bar or tab for the page.-->
-  </head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="SF Birds">
+        <title>SF Birds</title> <!--The title element determines what browsers show in the title bar or tab for the page.-->       
+    </head>
   <body>
     <main>
       <h1>San Francisco Birds App</h1>
-
       <section>
       <h2>Bird Photos</h2>
       <!--TODO: Add link to bird photos-->
@@ -15,8 +16,6 @@
       <!--target _blank is to open a link in a new tab-->
       <a target="_blank" href="https://i.ibb.co/TTnPGF2/kinglet-zoom.jpg"><img src="https://i.ibb.co/HYznq2w/kinglet.jpg" alt="Kinglet bird sitting on branch_zoom"></a>
     </section>
-    
-
     <section>
     <h2>Bird Lists</h2>
     <h3>Things birds love:</h3>
@@ -25,25 +24,21 @@
       <li>bugs</li>
       <li>sunflower seeds</li>
     </ul>
-
     <figure>
       <img src="https://i.ibb.co/gzjpr7h/caterpillar-small.jpg" alt="Tasty caterpillar">
       <figcaption>Birds <em>love</em> caterpillars.</figcaption>
     </figure>
-
     <h3>Tor 3 things birds hate:</h3>
     <ol>
       <li>cats</li>
       <li>other birds</li>
       <li>winter</li>
     </ol>
-
     <figure>
       <img src="https://i.ibb.co/tHSxQd6/Song-Sparrow.jpg" alt="Song Sparrow">
       <figcaption>Birds <strong>hate</strong> other birds</figcaption>
     </figure>
     </section>
-
     <section>
       <h2>Bird Form</h2>
 <!--There are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.
@@ -63,12 +58,10 @@ To prevent a user from submitting your form when required information is missing
           <input type="checkbox" id="dove" name="favorite" value="dove"> <label for="dove">Dove</label>
           <input type="checkbox" id="hummingbird" name="favorite" value="hummingbird"> <label for="hummingbird">Hummingbird</label>
         </fieldset>
-
         <input type="text" name="birdphotourl" placeholder="email" required> 
         <button type="submit">Submit form</button> <!--The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the type attribute with the value submit to the button to make it clear that it is a submit button.-->
       </form>
     </section>
-
     </main>
     <footer>No Copyright - <a target="_blank" href="https://www.sfbirds.nerd">sfbirds.nerd</a></footer>
   </body>
