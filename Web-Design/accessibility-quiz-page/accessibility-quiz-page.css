@@ -12,10 +12,10 @@ body {
   }
 
 #logo {
-    width: max(100px, 18vw);
+    height: 35px;    
     background-color: #0a0a23;
-    aspect-ratio: 35 / 4;
-    padding: 0.4rem;
+    aspect-ratio: 35 / 35;
+    padding: 5px 0 5px 30px;
 }
 
 header {
