@@ -1,1 +1,1 @@
-A journey of a thousand miles begins with a single step
+The best time to plant a tree was 20 years ago. The second best time is now.
