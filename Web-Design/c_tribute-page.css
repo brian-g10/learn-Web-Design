@@ -1,0 +1,48 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto 10px auto 10px;    
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;    
+}
+
+.about-dr {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block;
+    filter: blur(2px) grayscale(5);  
+}
+
+figure {
+    width: 70%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+section {
+    background: antiquewhite;    
+}
+
+footer {
+    margin: 50px auto 10px auto;
+    text-align: center;
+}
