@@ -1,0 +1,156 @@
+html { 
+    box-sizing: border-box; /*resetting the box model*/
+}
+
+body {
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+
+span[class~="sr-only"] { /*select any span element whose class includes sr-only*/
+    border: 0 !important; /*Important is to make sure that the settings will be applied despite others set in different selectors*/
+    clip: rect(1px, 1px, 1px, 1px) !important; /*to define the visible portions of an element.*/
+    clip-path: inset(50%) !important; /*clip-path property determines the shape the clip property should take. inset(50%) forms the clip-path into a rectangle within the element.*/
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important; /*To prevent the text content from overflowing*/
+    white-space: nowrap !important;
+    position: absolute !important; /*p p m are to take these hidden elements out of the document flow*/
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+h1 {
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+    display: flex; /*to enable the flexbox layout*/
+    flex-direction: column-reverse; /*this will display the nested elements from bottom to top*/
+    gap: 1rem; /*to create some space between the elements*/
+}
+
+h1 .flex span:first-of-type {/*to target the first element that matches the selector (the first span element in your .flex container. Your span elements are reversed, visually, so this will appear to be the second element on the page.)*/
+    font-size: 0.7em; /*to make it look like a sub-heading*/
+}
+
+h1 .flex span:last-of-type { /*to target the last span in your flex container*/
+    font-size: 1.2em; /*look like a header*/
+}
+
+section { /*to give a table an outer border*/
+    max-width: 40rem; /*for responsive design*/
+    margin: 0 auto; /*to center */
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    display: flex; /*enable flexbox*/
+    justify-content: flex-end; /*justify the content to the end of the flex direction*/
+    position: sticky; /*make the element sticky*/
+    top: 0; /*Fix it to the top of its container*/ 
+    color: #fff;
+    background-color: #0a0a23;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /*The calc() function is a CSS function that allows you to calculate a value based on other values*/
+    z-index: 999; /*To ensure your #years element does not get hidden by different stacks*/
+}
+
+#years span[class] { /*The span[class] syntax will target any span element that has a class attribute set, regardless of the attribute's value.*/
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/*span { The :not() pseudo-selector is used to target all elements that do not match the selector - in this case, any of your span elements that do not have the sr-only class. This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten.
+    font-weight: normal;
+}*/
+
+table {
+    border-collapse: collapse; /*allow cell borders to collapse into a single border, instead of a border around each cell*/
+    border: 0;
+    width: 100%;
+    position: relative;
+    margin: 3rem 0 0 0;
+}
+
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td {
+    width: 100vw; /*This approach ensures that the width is fixed, whereas setting width specifically would allow the elements to shrink to the container.*/
+    max-width: 4rem;
+    min-width: 4rem;
+}
+
+tbody th {
+    width: calc(100% - 12rem); /*'spaces!!!' a width of the entire container, less 12rem.*/
+}
+
+tr[class="total"] { /*The [attribute="value"] selector targets any element that has an attribute with a specific value*/
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+tr[class="total"] th { /*target the th elements within your table rows where the class is total*/
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+/*key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total.*/
+
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+tr.total td:nth-of-type(3) { /*The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type. Use this pseudo-selector to target the third td element within your total table rows.*/
+    padding: 0 0.5rem 0 0;
+}
+
+tr.total:hover {
+    background-color: #99c9ff;
+}
+
+td.current { /*td elements with the class value of current*/
+    font-style: italic;
+}
+
+tr.data { /*tr elements with the class set to data*/
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+    text-align: left;
+    padding: 0.3rem 0 0 0.5rem;
+}
+
+tr.data th .description { /*to target the elements with the class set to description that are within your th elements in your .data table rows. */
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin: 0 -13.5rem 0 0;
+}
+
+tr.data td {
+    vertical-align: top; /*Vertically align the text to the top*/
+    text-align: right; /*horizontally align the text to the right*/
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type { /*the td elements within your tr.data element, but specifically select the last one*/
+    padding: 0.5rem;
+}
