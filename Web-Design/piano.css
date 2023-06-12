@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box; /*to reset the box model.*/
+}
+
+/*Now that you have reset the html box model, you need to pass that on to the elements within as well. To do this, you can set the box-sizing property to inherit, 
+which will tell the targeted elements to use the same value as the parent element.
+You will also need to target the pseudo-elements, which are special keywords that follow a selector. The two pseudo-elements you will be using are the
+ ::before and ::after pseudo-elements.
+The ::before selector creates a pseudo-element which is the first child of the selected element, while the ::after selector creates a pseudo-element
+ which is the last child of the selected element. These pseudo-elements are often used to create cosmetic content, which you will see later in this project.*/
+
+ *, ::before, ::after {
+    box-sizing: inherit; /*reset the box model within html*/
+ }
+
+ #piano {
+    background-color: #846e01;
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    position: relative; /*The img element (logo) needs its parent to have a position set as a point of reference*/
+    border-radius: 10px; /*to cmooth the edges*/
+ }
+
+ .keys {
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden; /* to avoid the keys collapse when the browser window is smaller than 768px*/
+ }
+
+ .key {
+    background-color: #ffffff;
+    position: relative;
+    width: 41px;
+    height: 175px;
+    margin: 2px; /*margin between keys*/
+    float: left; /*to place .key elements horisontally*/
+    border-radius: 0 0 3px 3px; /*to smooth the keys*/
+ }
+
+ .key.black--key::after { /*To create the black keys. to target the elements with the class key black--key, and select the pseudo-element after these elements in the HTML*/
+    background-color: #1d1e22;
+    content: ""; /* to make the pseudo-elements empty. The content property is used to set or override the content of the element. By default, the pseudo-elements created by the ::before and ::after pseudo-selectors are empty, and the elements will not be rendered to the page. Setting the content property to an empty string "" will ensure the element is rendered to the page while still being empty.*/
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+ }
+
+ .logo {
+    width: 80px;
+    position: absolute;
+    top: 5px;
+ }
+
+ @media (max-width: 768px) { /*a media query, is used to conditionally apply CSS. Media queries are commonly used to apply CSS based on the viewport width using the max-width and min-width properties.*/
+    #piano {
+        width: 358px;
+    }
+    .keys {
+        width: 318px;
+    }
+    .logo {
+        width: 150px;
+    }
+ }
+
+ @media (min-width: 769px) and (max-width: 1199px) { /*a media query that targets a display width between 769px and 1199px*/
+    #piano {
+        width: 675px;
+    }
+    .keys {
+        width: 633px;
+    }
+ }
