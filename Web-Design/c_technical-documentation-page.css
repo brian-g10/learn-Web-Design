@@ -1,0 +1,110 @@
+@media (prefers-reduced-motion: no-preference) {
+    * { /* to select all elements*/
+        scroll-behavior: smooth;
+    }
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.navhead {
+    position: fixed;
+    width: 300px;
+    min-width: 290px;
+    height: 100%;   
+    background-color: #d9d9dc;
+    text-align: left;
+    padding: 0;
+    border-right: #6e6e6f solid 4px;    
+    margin: 0;
+}
+
+h1 {
+    color: #1b1b32;
+    font-size: min(5vw, 1.2em);
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+}
+
+nav li { /*...or nav > ul > li {...*/ 
+    color: #1b1b32;
+    margin: 0;
+    padding: 10px 20px 10px 20px;   
+    display: block; 
+    border-top: #6e6e6f solid 0.3px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+nav li:hover { /* or ...nav > ul > li:hover...*/
+    background-color: #f5f6f7;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {   
+    position: absolute;
+    top: 5px;
+    margin-left: 340px;
+    font-size: 0.9rem;
+}
+
+h2 {
+    font-size: min(5vw, 1.2em);
+    margin-top: 30px;
+}
+
+p {
+    margin: 10px 10px 10px 10px;
+}
+
+.list {
+    margin: 10px 10px 10px 50px;
+}
+
+.six-data {
+    margin: 10px 10px 10px 50px;
+    line-height: 2;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line; /*to start a new line if 'Enter' typed in the text*/
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #d9d9dc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#href:visited {
+    color: rgb(35, 23, 70);
+}
+
+#href:hover {
+    color: rgb(81, 81, 81);
+}
+#href:active {
+    color: brown;
+}
+
+.list:last-of-type {
+    margin-bottom: 30px;
+}
