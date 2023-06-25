@@ -1,0 +1,154 @@
+@media (prefers-reduced-motion: no-preference) {
+    * { /* to select all elements*/
+        scroll-behavior: smooth;
+    }
+    }
+
+#header-img {
+    height: 100px;    
+    background-color: #6aa76b;
+    aspect-ratio: 35 / 35;
+    padding: 5px 0 5px 30px;
+}
+
+h1 {
+    color: rgb(251, 206, 6);
+    font-size: 5rem;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background-color: #6aa76b;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;    
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav li { /*...or nav > ul > li {...*/
+    color: rgb(251, 206, 6);
+    margin: 0 2rem;
+    padding: 0.2rem;
+    display: block; 
+}
+
+nav li:hover { /* or ...nav > ul > li:hover...*/
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+li > a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+form {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 150px;
+}
+
+#email {
+    font-size: 35px;
+}
+
+input {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    padding: 10px;
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: 900;
+    background: #6aa76b;
+    border: 1px solid rgb(251, 206, 6);
+}
+
+h2, p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#how_to_eat {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  
+  .product > .level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .product > h2 {
+    margin-top: 15px;
+  }
+  
+  .product > ol {
+    margin: 15px 0;
+  }
+  
+  .product > ol > li {
+    padding: 5px 0;
+  }
+  
+  .product > button {
+    border: 0;
+    margin: 15px 0;
+    background-color: #f1c40f;
+    font-weight: 400;
+  }
+  
+  .product > button:hover {
+    background-color: orange;
+    transition: background-color 1s;
+  }
+  
+  @media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
